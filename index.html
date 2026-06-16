@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Bambi ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🔐 LOVE LOCK MINI-GAME OVERLAY -->
+  <div class="love-lock" id="loveLock">
+    <div class="love-lock-content" id="lockContent">
+      
+      <div class="lock-stage" id="lockStage1">
+        <div class="lock-icon">🔐</div>
+        <h2 class="lock-title">This website is locked!</h2>
+        <p class="lock-subtitle">Only Bambi can open it .. tap the things the cutie icon thingys 💕</p>
+        <div class="lock-score">
+          <span class="lock-hearts" id="lockHearts">🤍🤍🤍🤍🤍</span>
+          <span class="lock-counter" id="lockCounter">0 / 10</span>
+        </div>
+        <div class="lock-game-area" id="lockGameArea"></div>
+        <div class="lock-progress"><div class="lock-progress-fill" id="lockProgressFill"></div></div>
+        <p class="lock-hint" id="lockHint">Tap the 💕 🌸 🐱 but avoid the ❌</p>
+      </div>
+
+      <div class="lock-stage" id="lockStage2" style="display:none;">
+        <div class="lock-icon">💌</div>
+        <h2 class="lock-title">One question first...</h2>
+        <p class="lock-subtitle" id="gfQuestion">Are you my girlfriend? 👉👈</p>
+        <div class="gf-buttons" id="gfButtons">
+          <button class="gf-btn gf-btn-yes" id="gfBtnYes">YES! 💖</button>
+          <button class="gf-btn gf-btn-no" id="gfBtnNo">no... 😔</button>
+        </div>
+        <p class="lock-hint" id="gfHint"></p>
+        <div class="explosion-particles" id="explosionParticles"></div>
+      </div>
+
+      <div class="lock-stage" id="lockStage3" style="display:none;">
+        <div class="lock-icon">🔑</div>
+        <h2 class="lock-title">One last thing...</h2>
+        <p class="lock-subtitle">Enter the secret password, Bambi 💕</p>
+        <div class="password-input-wrapper">
+          <input type="password" class="password-input" id="passwordInput" placeholder="type here..." maxlength="20">
+          <button class="password-submit" id="passwordSubmit">🔓</button>
+        </div>
+        <p class="lock-hint" id="pwHint">Hint: it's something only we know 🐱🐰</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating petals container -->
+  <div class="petals-container" id="petalsContainer"></div>
+
+  <!-- Heart click tracker -->
+  <div class="heart-tracker" id="heartTracker">
+    <span id="heartCount">0</span>/10 💕
+  </div>
+
+  <!-- Secret message overlay -->
+  <div class="secret-overlay" id="secretOverlay">
+    <div class="secret-message">
+      <span class="close-secret" id="closeSecret">&times;</span>
+      <div class="secret-icon">💖</div>
+      <h2>woah you found this super top secret message 0_0</h2>
+      <p>I need to start by saying this: I hate it when you say you're not beautiful or attractive. You are, I promise you that. I'm the chopped one, mommy 💔✌️. I adore every single part of you, especially the parts you don't love. I love your honey brown eyes and how they turn hazel in the sunlight. I love your dyed hair, your handwriting, and those circle earrings that look so freaking good on you. I love your cute laugh (yes, even the adorable snort), your funny expressions, and the way your scent lingers on me like you're still here when you're not.
+You are my best friend and my girlfriend all in one, and we are so locked in. I love that we share the same humor and can just be completely weird together. I love our late-night talks, how much I freaking love being on the phone with you, and imagining us cuddled up watching things together in our future apartment. We need to play Roblox again soon, and I still gotta buy you Minecraft (and yeah, I miss Fortnite too). I even love your art—the attention to detail is amazing, and I still think about that unfinished blue and pink drawing with the stars. It was my favorite. I also love trying to spedazzle my way into your music, and I still listen to our playlist all the time.
+Thank you for being so passionate and caring, mi reina. Even when I push you away, you still try, and I am so grateful for that. You make me feel at home. I love the way you comfort and reassure me, the way you cuddle me and play with my hair, the way your lips feel on mine, and honestly, I love how you peg me until I can't think or walk straight. You make me feel so wanted, and you've been the light in my darkest moments. You've truly changed my life for the better.
+I love hearing you talk about your dreams, and I love planning our future together (and just saying, if we have a boy, his name is gonna be Cristiano or Rooney :3). I am so incredibly proud of everything you've accomplished, Isa. Never let your achievements go unnoticed, because if anyone isn't celebrating you, I will. I always will.
+I'm truly blessed to have you. You are my everything. I will never lose interest in you, I promise. I want you, I want you for myself, and I only want you, nobody else. I'll take care of you always. &lt;3</p>
+      <div class="secret-hearts">💕💕💕</div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">🌸</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#timeline">Our Story</a></li>
+        <li><a href="#reasons">Reasons</a></li>
+        <li><a href="#countdown">Countdown</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="lily-decoration left-lily">⚜️</div>
+      <p class="hero-subtitle">With all my love</p>
+      <h1 class="hero-title">Bambi <span class="rose-gold-heart">❤️</span></h1>
+      <p class="hero-description">Hey Bambi :3
+I was making those pipe cleaner flowers I told you about, and I randomly decided to pivot. Since I have obvious expertise in coding (LMAOAOAO), I figured I could whip this up pretty fast.
+I told you I wanted to show you my love in creative ways beyond just words, so I built this little space on the internet just for us. I hope it makes you smile as much as you make me smile.
+I love you 3000.</p>
+      <div class="lily-decoration right-lily">⚜️</div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll down</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- Lily Divider -->
+  <div class="lily-divider">
+    <span>🌸</span><span>⚜️</span><span>🌸</span><span>⚜️</span><span>🌸</span>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <h2 class="section-title">my favorite photos of you <3</h2>
+    <p class="section-subtitle">ALL MY FAVORITE PHOTOS OF YOU.. well top 6 :3</p>
+    <div class="gallery-grid">
+      <div class="polaroid" data-src="https://i.postimg.cc/bNYzYthK/6088CF43-950C-4EF9-B58E-BEB59CAD0842.jpg">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/bNYzYthK/6088CF43-950C-4EF9-B58E-BEB59CAD0842.jpg" alt="Memory 1"><div class="tape tape-1"></div></div>
+        <p class="polaroid-caption">when my cute baby did her halloween makeup (˶˃ ᵕ ˂˶) .ᐟ</p>
+      </div>
+      <div class="polaroid" data-src="https://i.postimg.cc/wTx6xmzY/IMG-9700.png">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/wTx6xmzY/IMG-9700.png" alt="Memory 2"><div class="tape tape-2"></div></div>
+        <p class="polaroid-caption">my sweet motherly bambi with our sweet kid domo \|°▿▿▿▿°|/</p>
+      </div>
+      <div class="polaroid" data-src="https://i.postimg.cc/CLMFMqg2/IMG-20260430-210832-147.jpg">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/CLMFMqg2/IMG-20260430-210832-147.jpg" alt="Memory 3"><div class="tape tape-3"></div></div>
+        <p class="polaroid-caption">when my GODESS OF A GIRLFRIEND did a full face and gosh .. ive never seen anyone pull off a full face that good. You did your makeup so flawlessly that day, it was like looking at a living masterpiece. Nobody does it quite like you.</p>
+      </div>
+      <div class="polaroid" data-src="https://i.postimg.cc/qMBkB3TP/lp-image.jpg">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/qMBkB3TP/lp-image.jpg" alt="Memory 4"><div class="tape tape-1"></div></div>
+        <p class="polaroid-caption">this is when you were sleepy but you looked and sounded so happy, I always go back to this photo because I feel like that smile was filled with so much love and passion. I love when my sweet little strawberry smiles, cant help but smile back!!!</p>
+      </div>
+      <div class="polaroid" data-src="https://i.postimg.cc/15R9RqSx/lp-image-1.jpg">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/15R9RqSx/lp-image-1.jpg" alt="Memory 5"><div class="tape tape-2"></div></div>
+        <p class="polaroid-caption">I took this when you were changing for P.E and you put me in your locker and I kept taking photos of you, you kept smiling and It made me so freaking happy :3 I love taking photos of you because no matter what, ill always get a smile out of you.</p>
+      </div>
+      <div class="polaroid" data-src="https://i.postimg.cc/mkLGr00g/2F7383B6-1C25-4746-A33B-EB11DD2E7DC5.jpg">
+        <div class="polaroid-inner"><img src="https://i.postimg.cc/mkLGr00g/2F7383B6-1C25-4746-A33B-EB11DD2E7DC5.jpg" alt="Memory 6"><div class="tape tape-3"></div></div>
+        <p class="polaroid-caption">Im sorry this one .. IS THE ONE .. you dont understand HOW MUCH I LOVE THIS PHOTO, I believe we were on call on discord, It was the day you did your full face AND IT PROVES IT .. "A Living Masterpiece" I cant wait to see you like this on dates we go on. Im gonna kiss every inch of that face</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen Image Viewer -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="Full view" id="lightboxImg">
+    <button class="lightbox-prev">&#10094;</button>
+    <button class="lightbox-next">&#10095;</button>
+  </div>
+
+  <!-- Lily Divider -->
+  <div class="lily-divider">
+    <span>🌸</span><span>⚜️</span><span>🌸</span><span>⚜️</span><span>🌸</span>
+  </div>
+
+  <!-- Love Letter Section -->
+  <section id="letter" class="letter-section">
+    <h2 class="section-title">A LETTER FOR MYY BAMBII (˶>⩊<˶)</h2>
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap" id="envelopeFlap"><div class="seal">💌</div></div>
+        <div class="envelope-body"><p class="envelope-label">⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔</p></div>
+      </div>
+      <div class="letter-paper" id="letterPaper">
+        <div class="letter-content">
+          <h3 class="letter-title">My Dearest Bambi,</h3>
+          <div class="letter-body">
+            <p>I wanted to make this website to show you how much I love and cherish you, my dearest Bambi. I told you I wanted to find more creative ways to express my love for you, and I saw a TikTok that inspired me to do this. I love you more than anything in this world, and I mean that. I don't know where I'd be without you.I know these past few months haven't been the best for us. They've been filled with more downs than ups. I take accountability for the majority of them, because the truth is they've been problems I caused. I intend to update this website frequently. I love you so much, Bambi. Honestly, I know we've been in a weird spot recently, but I'm still happy, so extremely, farting happy, that you're still letting me be around you and, most importantly, letting me love you.</p>
+            <p>I've always loved you, Bambi. Even throughout everything, I haven't once stopped loving you. I know we've had better days, and honestly, I wanna try my hardest to bring those back for me, for you, and most importantly for us. I love you so damn much, Bambi. I still dream about you, and I don't wanna let you go. I don't wanna imagine a life without you. I've gotten to know such an amazing person, an amazing daughter, girlfriend, sister. I genuinely have never felt this in love with anyone before in my life. I want it to be you and us. I want us to continue to grow together. I know you're afraid that we won't grow together, but allow me to fill you with determination, the same way you've done for me so many times. Take my hand, believe in my words, and believe in us. </p>
+            <p>I didn't wanna make it seem like I made this entire website just to win your feelings over and have you choose us. That wasn't my intention. My intention was for you to experience love in a different way. I know it might look silly on paper, but I tried my hardest putting this together. I did it for you, because I wanted you to feel love in a way that's different from me saying the same things over and over again. I can't really show you love physically, and that's a little sad, but I'm trying new things. I promise you'll be taken care of forever. You're my sweet little baby, and daddy's always gonna spoil you, love you, and most importantly, take care of you. Always. We promised to each other a year ago, no matter what happens we'll always stay together, no matter how big the bump is, no matter how big the crack is, no matter how hard gravity is pulling. We'd always stay together, pink promised and crossed our hearts and hoped to die.</p>
+          </div>
+          <div class="letter-signature">
+            <p>With all my love,</p>
+            <p class="signature-name">Simon Tecuanapa <3 </p>
+            <p class="signature-date">xoxo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lily Divider -->
+  <div class="lily-divider">
+    <span>🌸</span><span>⚜️</span><span>🌸</span><span>⚜️</span><span>🌸</span>
+  </div>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline-section">
+    <h2 class="section-title">ฅᨐฅ ME AND BAMBI'S Ი𐑼 STORYY</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal fade-left">
+        <div class="timeline-dot">🌸</div>
+        <div class="timeline-content"><h3>10/24/24</h3><span class="timeline-date">10.24.24</span><p>This was the day we officially became a couple. I know I started things off a little awkwardly, and looking back, I really wish I hadn't. But even then, I should have realized that the glowing, radiant girl standing right in front of me was going to become my entire future. You're the girl I'd do absolutely anything for.</p></div>
+      </div>
+      <div class="timeline-item reveal fade-right">
+        <div class="timeline-dot">⚜️</div>
+        <div class="timeline-content"><h3>Our First Kiss (⸝⸝๑﹏๑⸝⸝)</h3><span class="timeline-date">?.??.??</span><p>I remember I kept asking you for a kiss, I wantedd a kiss from you so badly. I remember the time I actually kissed you it was so awkward, Im glad It happened though. you're my first kiss ever lol, I remember wanting to play a big shot acting as if ive gotten a kiss before on the lips but I wanted it with you so badly. It wasnt a craving or necessity with other people, It was a craving and a necessity with you.</p></div>
+      </div>
+      <div class="timeline-item reveal fade-left">
+        <div class="timeline-dot">🌸</div>
+        <div class="timeline-content"><h3>Crystal Palace ⋆✴︎˚｡⋆</h3><span class="timeline-date">06.08.25</span><p>I still remember this day so vividly. We were on the phone when your dad walked in. You muted yourself, obviously lol, but when you came back, you told me your "Viltrumite of a Father" had invited me to Crystal Palace with you guys. I was so suspicious and scared I was going to do one thing wrong and get killed. I still laugh thinking about that car ride. It was so cramped LMAOAOAOA, and you kept touching me, but I was too terrified of your dad to touch you back. I had never roller skated before, and I was so scared of falling and humiliating myself. But looking back, I shouldn't have had that fear, because I had you there. You promised to protect me, and I was just too nervous to let your care actually reach me. If I could go back and change one thing about that date, it would be to finally listen to my Bambi. I wish I had just taken your hand and skated with you. Honestly, it would've been 100 times funnier if I kept falling, just so I could have seen your smile more often. I love remembering the little things: you squishing my butt on the way out (and me doing the same in return 𓁹‿𓁹), and your dad telling you to stop touching me in the car on the way home LMAOAOAO. But the part I think about the most is how we kissed goodbye. I wish that, even back then, I had just pulled you in and asked for a longer kiss.</p></div>
+      </div>
+      <div class="timeline-item reveal fade-right">
+        <div class="timeline-dot">⚜️</div>
+        <div class="timeline-content"><h3>Nathan's Birthday Party.</h3><span class="timeline-date">06.29.25</span><p>I remember this day so vividly. We hadn't seen each other in about three weeks since Crystal Palace, and I missed you so badly it physically hurt. I just wanted to be around you. I'll never forget my uncle awkwardly telling me to "make sure I wear protection" (GOSH, THAT WAS AWKWARD LMAOAOA), or how your dad was absolutely eyeing me down while you went to change. Maximum security, as always. But the second we got to the water, none of that mattered. I remember splashing you, and yes, I still remember exactly how many times you stuck your foot up my ass LMAOAO. I remember trying to sneakily touch you in the water, but honestly? None of that compares to the feeling I got watching you play around with the kids. Seeing you with them made me imagine us playing with our own kids like that in the future. It made me want a family with you so badly. And I don't mean that to continue my bloodline, I'm honestly not proud of my last name or some of the things my family has done. I want a family with you because I want a mini version of you. Someone with your habits, your voice, and the way you care. So that even when mommy's out of the house, I have a little Bambi to take care of, just like I've always took care of you as much as i could with this distance. It'd be googloplex times better. I remember kissing your forehead and how happy it made you. You smiled and asked if I really liked it. I really did. And I'm so glad you still do that middle part, because honestly, you look so beautiful and you are SO ABLE TO FREAKING ROCK IT. I remember every single kiss we snuck at the Airbnb. But the car ride home? That was truly the definition of euphoria. Once your dad and your cousins left, it was just us. I remember how many times we went back and forth, I guess thats what they call "popcorn kissing" ≽ ^⎚ ˕ ⎚^ ≼. I remember feeling this intense heat start at my ears, travel down to my cheeks, and settle deep in my waist. I'm sure you know exactly what I mean, Bambi. I know I wanted this page to be wholesome, but I have to be honest: in that moment, it felt like the rest of the world disappeared. It was just 🐾 kitty and bunny ݁ ˖Ი𐑼⋆, completely lost in each other, lost in the heat we've made and building up this naughty feeling ∘ ∘ ∘ ( °ヮ° ) ? I wish we could have stayed in that heat for so much longer. When we finally arrived at my uncle's house and your dad called said to you, "You're not gonna say goodbye to your boyfriend?", my heart dropped when i heard the car door close, I remember watching you come out calling my name, and all I could think was, I wish I gave you a longer hug. I wish our last kiss was the one we'd been craving all night. I wish I had pulled you in for a deep, slow French kiss, the kind where our lips part and a string of saliva connects us right before we finally let go. I wish I had made my moves. I wish I had made that night even more unforgettable for you. But even with those little regrets, that is a day I will remember forever. I will remember you forever. And I will love you forever.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lily Divider -->
+  <div class="lily-divider">
+    <span>🌸</span><span>⚜️</span><span>🌸</span><span>⚜️</span><span>🌸</span>
+  </div>
+
+  <!-- Reasons I Love You -->
+  <section id="reasons" class="reasons-section">
+    <h2 class="section-title">Reasons I Love You</h2>
+    <div class="reasons-grid">
+      <div class="reason-card reveal fade-up"><span class="reason-icon">💫</span><p>Reason 1 — "that amazing beautiful smile you have, it always shows when i take photos of you."</p></div>
+      <div class="reason-card reveal fade-up"><span class="reason-icon">✨</span><p>Reason 2 — "your eyes, they've always drawn me in. Im glad thats the first thing i saw in crowd full of people, were those beautiful dark honey eyes that turn a nice dark shade of hazel in the sunlight."</p></div>
+      <div class="reason-card reveal fade-up"><span class="reason-icon">🌟</span><p>Reason 3 — "The things you've taught me in a relationship, I know as of recently i havent been the best and it seems like everything you've taught me was gone. Im still glad you've taken time to teach me, you taught me to be more open, more present, more caring, how to love, most importantly how to observe. "</p></div>
+      <div class="reason-card reveal fade-up"><span class="reason-icon">💝</span><p>Reason 4 — "I love that you've told things about you that you usually wouldn't tell other people and some thing you've told me that take a lot of trust and courage to tell someone and I want to thank you for that, i love that youre able to trust me and be comfortable with telling me such things."</p></div>
+      <div class="reason-card reveal fade-up"><span class="reason-icon">🕊️</span><p>Reason 5 — "I love how beautiful you are inside and out, I've always wanted to try to expand my vocab for you so that you wouldn't hear the same stuff and have it become repetitive. I flipping love it when you do full face or the special make up you do like the zombie one or the clown one, I cant wait for when we move in and i see you doing your make up and i ask if you could do it on me too. you're my person, one of a kindd :3 ."</p></div>
+      <div class="reason-card reveal fade-up"><span class="reason-icon">🌷</span><p>Reason 6 — "I love how caring you, i'd see you with dj, nyrobie, squishie. I cant help but wonder how you'd as a mother. you're gentle and strict when its needed, you've managed to calm me down. It sounds weird but you've always feel like a kid again being calmed by his mother and I dont know, It makes me even more drawn to you isabella. I cant wait to see you this our kids baby."</p></div>
+    </div>
+  </section>
+
+  <!-- Lily Divider -->
+  <div class="lily-divider">
+    <span>🌸</span><span>⚜️</span><span>🌸</span><span>⚜️</span><span>🌸</span>
+  </div>
+
+  <!-- Countdown Section -->
+  <section id="countdown" class="countdown-section">
+    <h2 class="section-title">Counting Down</h2>
+    <p class="section-subtitle">Until October 24th</p>
+    <div class="countdown-container">
+      <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Days</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hours</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Minutes</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span class="countdown-label">Seconds</span></div>
+    </div>
+    <p class="countdown-message">Our Anniversary Its right around the corner :3</p>
+  </section>
+
+  <!-- Music Player -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-toggle" id="musicToggle" title="Play/Pause Music"><span class="music-icon">🎵</span></button>
+    <div class="music-info"><span class="music-note">♪</span><span class="music-text">Now Playing: Moon Love — Chet Baker</span></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="lily-watermark">🌸</div>
+    <p>Made with all my heart for Bambi ❤️</p>
+    <p class="footer-date">Isabella Smith And Simon Smith • 2024</p>
+  </footer>
+
+  <!-- 🐱 Interactive Cat Companion -->
+  <div class="cat-companion" id="catCompanion">
+    <div class="cat-speech-bubble" id="catSpeech">bambi... they put me in a website</div>
+    <img src="https://i.postimg.cc/PxskQ99q/Untitled2-20260616134236.png" alt="Cat companion" class="cat-image" id="catImg">
+  </div>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
